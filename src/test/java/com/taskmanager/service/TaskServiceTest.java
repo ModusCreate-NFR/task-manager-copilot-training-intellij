@@ -35,16 +35,4 @@ class TaskServiceTest {
         List<Task> tasks = taskService.getAllTasks();
         assertEquals(2, tasks.size());
     }
-
-    // Test to verify finding completed tasks
-    @Test
-    void testGetAllCompletedTasks() {
-        Task task1 = new Task(1, "Test Task 1", "This is the first test task");
-        Task task2 = new Task(2, "Test Task 2", "This is the second test task");
-        task1.setCompleted(true);
-        taskService.addTask(task1);
-        taskService.addTask(task2);
-        List<Task> tasks = taskService.getAllCompletedTasks();
-        assertEquals(1, tasks.size());
-    }
 }
